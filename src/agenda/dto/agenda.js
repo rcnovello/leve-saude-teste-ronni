@@ -8,14 +8,6 @@ class Agenda {
         this._especialidade = "";
         this._horariosDisponiveis = [];
     }
-    /*
-    constructor(id: number, nome: string, especialidade: string, horariosDisponiveis: string[]) {
-      this._id = id;
-      this._nome = nome;
-      this._especialidade = especialidade;
-      this._horariosDisponiveis = horariosDisponiveis;
-    }
-    */
     get get_id() {
         return this._id;
     }
@@ -66,7 +58,7 @@ class Agenda {
     }
     ;
     cadAgendas() {
-        const Agendas = [{
+        const cadAgenda = [{
                 "mensagem": "Agendamento realizado com sucesso",
                 "agendamento": {
                     "medico": "Dr. João Silva",
@@ -75,7 +67,7 @@ class Agenda {
                 }
             }
         ];
-        return JSON.stringify(Agendas);
+        return JSON.stringify(cadAgenda);
     }
     ;
 }

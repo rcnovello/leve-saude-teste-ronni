@@ -1,0 +1,107 @@
+{
+  "/Users/ronninovello/Documents/GitHub/leve-saude-teste-ronni": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.7",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/ronninovello/Documents/GitHub/leve-saude-teste-ronni",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "leve-saude",
+      "frameworkVersion": "4",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "plugins": [
+        "serverless-offline"
+      ],
+      "functions": {
+        "teste": {
+          "handler": "./src/handlers/teste.handler",
+          "events": [
+            {
+              "http": {
+                "path": "teste",
+                "method": "get"
+              }
+            }
+          ]
+        },
+        "agendas": {
+          "handler": "./src/agenda/controller/agenda.handler",
+          "events": [
+            {
+              "http": {
+                "path": "agendas",
+                "method": "get"
+              }
+            }
+          ]
+        },
+        "agendamento": {
+          "handler": "./src/agenda/controller/agendamento.handler",
+          "events": [
+            {
+              "http": {
+                "path": "agendamento",
+                "method": "post"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "serviceRawFile": "service: leve-saude\n\nframeworkVersion: '4'\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n\nplugins:\n  - serverless-offline\n\nfunctions:\n  teste:\n    handler: ./src/handlers/teste.handler\n    events:\n      - http:\n          path: teste\n          method: get\n  agendas:\n    handler: ./src/agenda/controller/agenda.handler\n    events:\n      - http:\n          path: agendas\n          method: get        \n  agendamento:\n    handler: ./src/agenda/controller/agendamento.handler\n    events:\n      - http:\n          path: agendamento\n          method: post     \n",
+    "command": [
+      "offline",
+      "start",
+      "build"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless command \"offline start build\" not found. Run \"serverless help\" for a list of all available commands.",
+      "code": "UNRECOGNIZED_CLI_COMMAND"
+    },
+    "params": {},
+    "machineId": "8e927c146dc49cfbfe4671d91d66fbe6",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "f40ae1c6-1e6d-48f1-b088-8babda8e4bb2",
+    "orgName": "rcnovello",
+    "userId": "gmvHpPHVMZg8jx1pyj",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "rcnovello",
+    "subscription": null,
+    "userEmail": "ronnicorrea@hotmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "615299736978",
+    "projectType": "traditional",
+    "versionSf": "4.4.7",
+    "serviceProviderAwsCfStackName": "leve-saude-dev",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
