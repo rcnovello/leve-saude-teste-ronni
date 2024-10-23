@@ -1,0 +1,30 @@
+service: leve-saude
+
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+plugins:
+  - serverless-offline
+
+functions:
+  teste:
+    handler: ./src/handlers/teste.handler
+    events:
+      - http:
+          path: teste
+          method: get
+  agendas:
+    handler: ./src/agenda/controller/agenda.handler
+    events:
+      - http:
+          path: agendas
+          method: get        
+  agendamento:
+    handler: ./src/agenda/controller/agendamento.handler
+    events:
+      - http:
+          path: agendamento
+          method: post     
